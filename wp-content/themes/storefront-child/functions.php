@@ -12,3 +12,6 @@ function tholsson_meta_end()
 {
     echo '</i>';
 }
+
+// Remove coupon message in checkout
+remove_action('woocommerce_before_checkout_form', 'woocommerce_checkout_coupon_form', 10);
